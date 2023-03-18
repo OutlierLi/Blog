@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: '一蓑烟雨'  # 网站标题
-subtitle:    # 网站副标题
-description: # 网站描述
+title: '世界很大...'  # 网站标题
+subtitle: 'What kind of person do you madly aspire to be?'   # 网站副标题
+description: OutlierLi's vlog # 网站描述
 author: 'OutlierLi'  # 作者
 language: zh-CN   # 语言
 timezone:    # 网站时区, Hexo默认使用您电脑的时区
@@ -13,9 +13,9 @@ timezone:    # 网站时区, Hexo默认使用您电脑的时区
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child'
 ## and root as '/child/'
-url: http://outlierli.ink # 你的站点Url
+url: http://blog.outlierli.ink # 你的站点Url
 root: /                    # 站点的根目录
-permalink: :year/:month/:day/:title/   # 文章的 永久链接 格式   
+permalink: :title/   # 文章的 永久链接 格式   
 permalink_defaults:        # 永久链接中各部分的默认值
 
 # Directory   
@@ -72,4 +72,4 @@ theme: butterfly   # 主题名称
 deploy:     
   type: '' # 类型，常用的git 
 
-  
+
