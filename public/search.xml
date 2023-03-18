@@ -2,45 +2,6 @@
 <search> 
   
   
-    
-    <entry>
-      <title>目前进度</title>
-      <link href="/2023/03/16/%E7%9B%AE%E5%89%8D%E8%BF%9B%E5%BA%A6/"/>
-      <url>/2023/03/16/%E7%9B%AE%E5%89%8D%E8%BF%9B%E5%BA%A6/</url>
-      
-        <content type="html"><![CDATA[<h1 id="目前进度"><a href="#目前进度" class="headerlink" title="目前进度"></a>目前进度</h1><h2 id="3月14日"><a href="#3月14日" class="headerlink" title="3月14日"></a>3月14日</h2><p>（3月14日开会报告）</p><h3 id="进度分析"><a href="#进度分析" class="headerlink" title="进度分析"></a>进度分析</h3><h4 id="已经完成的工作"><a href="#已经完成的工作" class="headerlink" title="已经完成的工作"></a>已经完成的工作</h4><ul><li>  [x] 网络motif有关的基础知识的了解</li><li>  [x] SCMD论文阅读</li><li>  [x] SCMD源码阅读</li><li>  [x] 数值和可视化的形式：Cytiscape可视化</li></ul><h4 id="还需要完成的工作"><a href="#还需要完成的工作" class="headerlink" title="还需要完成的工作"></a>还需要完成的工作</h4><ul><li>  [ ] 自然网络和人工网络中的motif差异</li></ul><h3 id="目前的任务"><a href="#目前的任务" class="headerlink" title="目前的任务"></a>目前的任务</h3><ul><li><p>  [ ] 归纳源码中的网络的类别：自然网络/人工网络（生物网络、人际关系网络、生物信息网络、神经网络、基因调控网络）</p></li><li><p>  [ ] 将源码中得到的网络motif的信息进行整理，具体包括保存下来的motif有关文件的每一个数据代表的意义</p></li><li><p>  [ ] 可视化网络motif</p></li><li><p>  [ ] 了解网络motif差异的对比指标，包括网络差异的对比指标：motif规模、motif模糊度等（分析维度有哪些）</p></li></ul><hr><p>复杂网络（小世界网络模型、无尺度网络模型）</p><h3 id="自然网络和人工网络中的motif差异"><a href="#自然网络和人工网络中的motif差异" class="headerlink" title="自然网络和人工网络中的motif差异"></a>自然网络和人工网络中的motif差异</h3><p>特征向量比较</p><p>motif比较</p><p>motif数量比较</p><hr><h3 id="目前的进度："><a href="#目前的进度：" class="headerlink" title="目前的进度："></a>目前的进度：</h3><p>网络motif的研究过程，子图穷举和子图随机采样确定网络中的精确motif或概率motif。</p><p>FCMD算法识别网络中的模糊motif的论文：基于局部结构特征聚类的网络模糊motif识别算法。</p><p>对论文对应的源代码进行学习，详细了解了FCMD算法具体实现的流程。</p><p>对源代码提取出的模糊motif用Cytoscape工具可视化，并对模糊motif的不同子图用Cytoscape工具中的CytoMCS插件提取最大同构子图提取出一个精确motif的可视化；</p><h3 id="后期："><a href="#后期：" class="headerlink" title="后期："></a>后期：</h3><p>用FCMD算法跑更多的网络，包括人工网络和自然网络，自然网络在FCMD实现的源码中就有6个，人工网络可以选择网上很多的社交网络数据集（FaceBook数据集），或者卷积神经网络；</p><p>怎么分析自然网络和人工网络的motif的差别？统计自然网络和人工网络识别出的motif的规模大小和数量？还是要寻找相似的motif？或者对得到的模糊motif的特征矢量进行比较？</p><p>单纯的可视化比较motif，只能帮助理解motif之间的关系，而不能提供深层次的结论或洞见；</p><p>网络相似度比较，图形匹配算法（如VF2算法）：这种算法可以用于比较两个motif之间的相似性。操作步骤是将两个motif进行匹配（即，找到它们之间的对应关系），然后比较它们之间的连接方式和节点属性。VF2算法是一种快速且准确的图形匹配算法。对自然网络和人工网络提取出来的motif进行相似度比较，找到相似度很大和很小的，推断出近似的motif和差异大的motif，然后推测差异的原因。</p><p>VF2算法是一种用于图匹配的算法，可以用于自然网络和人工网络的motif的差异比较。其基本思路是将两个网络中的图（motif）进行一一匹配，从而找到相似的子结构。<br>在比较自然网络和人工网络的motif时，可以分别将它们的motif用VF2算法进行匹配，找到两者之间的相似子结构。通过比较相似子结构的数量、大小、位置、特征等方面的差异，可以得出不同网络之间的motif的差异情况。<br>具体来说，可以按照以下步骤进行差异比较：</p><ol><li>  对自然网络和人工网络分别提取motif，得到motif的集合。</li><li>  对两个网络中的motif集合进行匹配。遍历原图的所有顶点，并以它们为起始点执行VF2算法，将找到的同构（即结构相同）的子图进行记录。可以同时记录匹配的顺序和匹配失败的分支。</li><li>  对比相似子结构，找出差异。可以统计相似子结构的数量、大小、特征等指标，进一步分析不同网络之间的motif差异，并发现不同的motif类型、数量及其在网络中的分布情况等。</li></ol><p>通过这种方式，可以发现不同网络之间的motif差异，并了解自然网络和人工网络在结构上的异同，进一步探究它们的演化机制和规律。</p><p>根据已经知道的知识，可以推测自然网络和人工网络的差异：</p><p>自然网络和人工网络motif的差异主要表现在以下三个方面：</p><ol><li>  模式数量和复杂性</li></ol><p>自然网络拥有大量的motif，其中一些具有相对较大和更为复杂的结构，而人工网络的motif数量则相对较少且较为简单。这是因为自然网络需要适应和应对更为复杂的环境和选压条件，而人工网络的构建一般考虑的是特定的工程需求和性能要求。</p><ol start="2"><li>  模式分布和位置</li></ol><p>自然网络中的motif分布更加分散和复杂，通常分布在不同层次的组分和子网络中，并在整个网络中形成复杂的交错和联结。人工网络的motif则通常分布在较大的网络结构中，如卷积神经网络中的滤波器。</p><ol start="3"><li>  功能和适应性</li></ol><p>自然网络的motif不仅仅是一种结构形式，还具有不同的功能和适应性特征，如代表不同的生物途径和网络动态过程。而人工网络的motif通常是为了实现特定的计算功能而设计，功能和适应性较为单一。<br>这些差异是由于自然网络和人工网络的演化过程和设计目的不同所造成的。自然网络需要适应和应对复杂的环境和生物学要求，因此形成了复杂的结构和设计原理。而人工网络的构建一般考虑的是特定的工程需求和性能要求，导致其模式数量和复杂度较低。科学逻辑推理认为，网络模式复杂度增加可以提高网络适应和计算功能，但同时也带来了更高的计算成本和更难的优化问题。</p><p>是否应该设置实验来验证这些差异性的表现。</p><p>网络差异比较算法包括以下几种：<br>1.节点度分布比较：比较两个网络中节点度数的分布情况，判断它们的拓扑结构是否相似。<br>2.节点聚集程度比较：比较两个网络中节点的聚集程度，以此来评估它们中间存在的差异。<br>3.中心性指标比较：比较两个网络中节点的中心性指标，判断它们在网络中的重要性以及相对重要程度是否一致。<br>4.模块化程度比较：比较两个网络中的模块化程度，评估网络的内部结构组织程度是否相似。<br>5.元图比较：通过比较两个网络的元图来评估它们的相似性和差异性。<br>这些算法通常结合实际问题和具体应用场景进行选用和调整，以获得更准确和全面的判断。</p><hr><ul><li>  [ ] 网络数据集下载（自然网络已经有6个了，人工网络多下点）</li><li>  [ ] 部署到代码中，注意保存路径</li><li>  [ ] 跑代码</li><li><input disabled="" type="checkbox"> 网络motif统计信息，python实现<ul><li>  [ ] 提取最大同构子图（网络相似度），提取最大同构子图的算法：先提取，在统计边的模糊度</li><li>  [ ] 统计motif数量（代码中有，利用代码中信息，S、D.mat信息）和大小（也可以根据上一步的进行代码统计）</li><li>  [ ] 建立一个向量保存各种数据（向量后续好聚类）</li><li>  [ ] 寻找自然网络中出现次数多的motif，对出现的motif进行次数的排序，统计重要性和不重要性也要区分</li><li>  [ ] 一个网络中就几个motif，肉眼也可观察，可以先用可视化软件观察，后续写代码</li><li>  [ ] 比较motif(网络)的复杂度，找合适的代码和公式，证明结论3</li><li>  [ ] 分布分散如何证明？和原网络对比，找到分布图，关键是找网络分布分散的公式算法</li></ul></li><li><input disabled="" type="checkbox"> 验证的结论<ul><li>  [ ] 自然网络motif大，人工网络motif小</li><li>  [ ] 自然网络motif分布更加分散</li><li>  [ ] 自然网络motif多且复杂，人工网络motif少且简单</li></ul></li></ul>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2023/03/16/hello-world/"/>
-      <url>/2023/03/16/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2022/01/16/%E8%AF%AB%E5%B7%B1%E4%B9%A6%20/"/>
-      <url>/2022/01/16/%E8%AF%AB%E5%B7%B1%E4%B9%A6%20/</url>
-      
-        <content type="html"><![CDATA[<p>###2022年1月16日于颓废中诫己书 </p><p>​          又有闲情雅致否？</p><p>​          年少时看得太高，老是压不下身段，自觉己志高才高，不屑与俗人行事；但又畏惧鹤立鸡群，枪打出头鸟，便低头横眉抬头笑，自以为出得了尘，入得了世，实则横竖不是人，一伪君子也。</p><p>​          愈是年长了几分，反而愈没了低头的忍性，觉得早些年自得的事情如今想来却甚是荒唐。横眉不是出尘，低头不是入世；若是鹤，岂畏立鸡群？若是鹰，岂受枪管之胁便压着高飞之志？说白了，就是怂；不仅怂，而且喜欢怂得有理，怂得能自圆其说。</p><p>​          吾无才便怂，无才还畏事，便更怂。</p><p>​          自以为志高便能乘云，实则才浅不配腾空。想来已将就活一个青春，不如胡作非为的世家子弟活得放肆，也不如死磕道理的人活得有用。眼高手低，志高才浅，寻桃源无果，看世俗难回，野鬼孤魂不过如此。</p><p>​          觉得世人嘈杂，实则己不静；觉得世人俗气，实则己未雅。天下事，有多少顺耳？古今人，有几分不俗？想来是自己心胸狭窄，忍不得不喜之声，听不得逆耳之言。若是追求放肆，不忍不听便可；可若是心有志，难免要忍常人难忍之事，难免要听常人难听之言。年少时便自诩有志之人，却听不得世俗之见，下不得苦功夫，走不得不寻常之路，仅愿沉浸于己之幻想，不免下流矣。</p><p>​          年岁驰去，悔意渐增。遇爱慕之人时自诩精力逐志，实则不敢一倾爱慕之意；错爱慕之人后悔不当初，终则志未成而人已去。此等荒唐事岂止于情爱？岂畏废志？只是以废志为借口逃避罢了。古之圣人曾语云：“有舍有得”。吾自以为得志必要学太上忘情，实则不然。得志何必忘情？痴迷于网络之时间有，痴情于钟爱之人时间岂曰无？舍优不肯舍劣，舍对不肯舍错，实在荒唐，舍情不过借口耳。此刻暮然回首，方见己之虚伪。</p><p>​          情已默，志难成。碌碌俗事不喜却不得不做，浅浅才情始于空想也堕于空想。</p><p>​          遥想些许年后，年少时不愿与之同流之人早已成就，末了独余一不成事之怂人吾也。</p><p>​          世俗成就、他人之见或都可淡淡视之，但一生没了骨头，愧对自己那份志气。</p><p>​          虽荒废大半青春，但黑发未白，岂可就此颓废？若是依旧骗己纵己，只当这满篇荒唐，都付与牛马语。</p><p>​          颓废中，得志时，愿不时观之看之，时时不忘本心，成就大事业或不可得，但无愧于己亦难得。</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
   
   
 </search>
