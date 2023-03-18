@@ -1,7 +1,7 @@
 #page-header
   position: relative
   width: 100%
-  background-color: $light-blue
+  // background-color: $light-blue
   background-position: center center
   background-size: cover
   background-repeat: no-repeat
@@ -66,7 +66,6 @@
     position: absolute
     bottom: 0
     width: 100%
-    cursor: pointer
 
     .scroll-down-effects
       position: relative
@@ -124,8 +123,7 @@
       background: rgba(255, 255, 255, .8)
       box-shadow: 0 5px 6px -5px rgba(133, 133, 133, .6)
 
-      a,
-      .site-name
+      a
         color: var(--font-color)
         text-shadow: none
 
@@ -138,16 +136,8 @@
       box-shadow: 0 5px 6px -5px alpha($grey, .6)
       transition: transform .2s ease-in-out, opacity .2s ease-in-out
 
-      #blog-info
-        color: var(--font-color)
-
-        &:hover
-          color: $light-blue
-
-        .site-name
-          text-shadow: none
-
       a,
+      #site-name,
       #toggle-menu
         color: var(--font-color)
         text-shadow: none
@@ -155,12 +145,7 @@
         &:hover
           color: $light-blue
 
-    &.fixed
-      #nav
-        top: 0
-        transition: all .5s
-
-  &.nav-visible:not(.fixed)
+  &.nav-visible
     #nav
       transition: all .5s
       transform: translate3d(0, 100%, 0)
@@ -169,19 +154,6 @@
       & > .aside-content > .sticky_layout
         top: 70px
         transition: top .5s
-
-  &.fixed
-    #nav
-      position: fixed
-
-    & + .layout
-      & > .aside-content > .sticky_layout
-        top: 70px
-        transition: top .5s
-
-      #card-toc
-        .toc-content
-          max-height: calc(100vh - 170px)
 
 #page
   h1.page-title
@@ -238,7 +210,7 @@
 
     .post-meta
       &-separator
-        margin: 0 5px
+        margin: 0 8px
 
       &-icon
         margin-right: 4px
@@ -280,15 +252,8 @@
   &.show
     opacity: 1
 
-  #blog-info
+  #blog_name
     flex: 1
-    color: var(--light-grey)
-    @extend .limit-one-line
-
-    .site-icon
-      margin-right: 6px
-      height: 36px
-      vertical-align: middle
 
   #toggle-menu
     display: none
@@ -304,7 +269,7 @@
     &:hover
       color: var(--white)
 
-  .site-name
+  #site-name
     text-shadow: 2px 2px 4px rgba($dark-black, .15)
     font-weight: bold
 
@@ -334,10 +299,10 @@
         margin-top: 8px
         padding: 0
         width: max-content
-        border-radius: 5px
         background-color: var(--sidebar-bg)
         box-shadow: 0 5px 20px -4px rgba($dark-black, .5)
         animation: sub_menus .3s .1s ease both
+        border-radius: 5px
 
         &:before
           position: absolute
@@ -354,13 +319,9 @@
             background: var(--text-bg-hover)
 
           &:first-child
-            border-top-left-radius: 5px
-            border-top-right-radius: 5px
-
+            border-radius: 5px 5px 0 0
           &:last-child
-            border-bottom-right-radius: 5px
-            border-bottom-left-radius: 5px
-
+            border-radius: 0 0 5px 5px
           a
             display: inline-block
             padding: 8px 16px
@@ -383,14 +344,13 @@
 
   #search-button
     display: inline
-    padding: 0 0 0 14px
+    padding: 0px
 
   .site-page
     position: relative
     padding-bottom: 6px
     text-shadow: 1px 1px 2px rgba($dark-black, .3)
     font-size: .78em
-    cursor: pointer
 
     &:not(.child)
       &:after
