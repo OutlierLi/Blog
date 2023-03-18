@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo  # 网站标题
+title: '一蓑烟雨'  # 网站标题
 subtitle:    # 网站副标题
 description: # 网站描述
-author: John Doe  # 作者
-language:    # 语言
+author: 'OutlierLi'  # 作者
+language: zh-CN   # 语言
 timezone:    # 网站时区, Hexo默认使用您电脑的时区
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child'
 ## and root as '/child/'
-url: http://yoursite.com   # 你的站点Url
+url: http://outlierli.ink # 你的站点Url
 root: /                    # 站点的根目录
 permalink: :year/:month/:day/:title/   # 文章的 永久链接 格式   
 permalink_defaults:        # 永久链接中各部分的默认值
@@ -64,7 +64,7 @@ pagination_dir: page   # 分页目录
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape   # 主题名称
+theme: butterfly   # 主题名称
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
