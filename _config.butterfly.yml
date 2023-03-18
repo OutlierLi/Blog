@@ -16,7 +16,7 @@ menu:
 
 # 导航栏
 nav:
-  logo: /picture/Logo.jpg # image，支持网页图片链接
+  logo: /pictures/Logo.jpg # image，支持网页图片链接
   display_title: true # 是否显示网站标题
   fixed: false # fixed navigation bar 是否固定状态栏
 
@@ -107,7 +107,7 @@ disable_top_img: true
 index_img:
 
 # If the banner of page not setting, it will show the top_img
-default_top_img:
+default_top_img: /pictures/pexels-andy-vu-3244513.jpg
 
 # The banner image of archive page
 archive_img:
