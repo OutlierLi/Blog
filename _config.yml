@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Fomalhaut🥝
+title: OutlierLi🥭
 subtitle: 
 description: 'Future is now 🍭🍭🍭'
-keywords: 'Java,MySQL,算法,代码,博客,Butterfly,Hexo,Fomalhaut🥝,Fomalhaut'
-author: Fomalhaut🥝
+keywords: '算法,代码,博客,Butterfly,Hexo,OutlierLi🥭,读书,电影,自律,计算机'
+author: OutlierLi🥭
 language: zh-CN
 timezone: ''
 
@@ -271,23 +271,23 @@ magnet:
   devide: 3
   display:
     - name: 算法
-      display_name: 小Fの算法学习笔记
+      display_name: OutlierLiの算法学习笔记
       icon: 🍡
     - name: 计算机基础
-      display_name: 小Fの计算机基础笔记
+      display_name: OutlierLiの计算机基础笔记
       icon: 🍼
-    - name: 魔改教程
-      display_name: 小Fの博客魔改教程
+    - name: 机器学习
+      display_name: OutlierLiの机器学习笔记
       icon: 🍉
-    - name: Java基础
-      display_name: 小FのJava基础笔记
+    - name: 读书
+      display_name: OutlierLiの读书笔记
       icon: 🍟
-    - name: 数据库
-      display_name: 小Fの数据库笔记
+    - name: 电影
+      display_name: OutlierLiの观影笔记
       icon: 🍨
-    - name: 演示
-      display_name: 小Fの案例演示笔记
-      icon: 🍥
+    # - name: 演示
+    #   display_name: 小Fの案例演示笔记
+    #   icon: 🍥
   color_setting:
     text_color: black # 文字默认颜色
     text_hover_color: white # 文字鼠标悬浮颜色

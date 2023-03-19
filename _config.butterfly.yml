@@ -26,13 +26,13 @@ menu:
     旧时光: /site/time/ || icon-xianxingshalou || faa-tada
   个人 || icon-maoliang || faa-tada || hide:
     唠叨: /personal/bb/ || icon-qunliaotian || faa-tada
-    恋爱小屋: /personal/love/ || icon-love-sign || faa-tada
+    日志: /personal/love/ || icon-love-sign || faa-tada
     关于: /personal/about/ || icon-paperplane || faa-tada
 
 # Code Blocks (代碼相關)
 # --------------------------------------
 
-highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: mac light #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
@@ -51,14 +51,14 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  # Github: https://github.com/fomalhaut1998 || icon-github || faa-tada
-  微信: /assets/QRCode.jpg || icon-weixin || faa-tada
-  QQ: https://res.abeim.cn/api/qq/?qq=1174008660 || icon-QQ || faa-tada
-  B站: https://space.bilibili.com/220757832 || icon-bilibili || faa-tada
-  QQ邮箱: mailto:1174008660@qq.com || icon-youxiang || faa-tada
-  力扣: https://leetcode.cn/u/fomalhaut1998 || icon-leetcode || faa-tada
+  Github: https://github.com/OutlierLi || icon-github || faa-tada
+  微信: /assets/WXCode.jpg || icon-weixin || faa-tada
+  # QQ: https://res.abeim.cn/api/qq/?qq=1174008660 || icon-QQ || faa-tada
+  B站: https://space.bilibili.com/14434835 || icon-bilibili || faa-tada
+  QQ邮箱: mailto:1808851818@qq.com || icon-youxiang || faa-tada
+  # 力扣: https://leetcode.cn/u/fomalhaut1998 || icon-leetcode || faa-tada
   # 微博: https://weibo.com/u/6473136435 || icon-weibo || faa-tada
-  # 知乎: https://www.zhihu.com/people/liang-jia-chao-19 || icon-shejiaotubiao-10 || faa-tada
+  知乎: https://www.zhihu.com/people/fan-fen-fang-meng || icon-shejiaotubiao-10 || faa-tada
   # RSS: /atom.xml || icon-RSS || faa-tada
 
   # iconfont icon-github: https://github.com/fomalhaut1998 || Github
@@ -113,7 +113,7 @@ favicon:
 
 # Avatar (頭像)
 avatar:
-  img: https://tuchuang.voooe.cn/images/2023/01/02/avatar.webp
+  img: /assets/touxiang.jpg
   effect: false
 
 # Disable all banner image
@@ -224,10 +224,10 @@ reward:
   enable: true
   coinAudio: https://npm.elemecdn.com/akilar-candyassets@1.0.36/audio/aowu.m4a
   QR_code:
-    - img: https://tuchuang.voooe.cn/images/2023/01/04/2.webp
+    - img: /assets/weixin.jpg
       link:
       text: 微信
-    - img: https://tuchuang.voooe.cn/images/2023/01/04/20f8e49805975b8f8.webp
+    - img: /assets/zhifubao.jpg
       link:
       text: 支付宝
 
@@ -447,7 +447,7 @@ crisp:
 footer:
   owner:
     enable: true
-    since: 2022
+    since: 2023
   custom_text:
   copyright: false # Copyright of theme and framework
 
@@ -671,7 +671,7 @@ subtitle:
   source: false
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
   sub:
-    - "Welcome to Fomalhaut🥝のTiny Home!🤣🤣🤣"
+    - "Welcome to OutlierLi🥭 Home!🤣🤣🤣"
     - "Hope you have a nice day!🍭🍭🍭"
 
 # Loading Animation (加載動畫)
@@ -701,8 +701,8 @@ aside:
     button:
       enable: true
       icon: # fab fa-github
-      text: 前往小窝
-      link: https://github.com/fomalhaut1998
+      text: "Follow me"
+      link: https://github.com/OutlierLi
   card_announcement:
     enable: true
     content: <center><b>--- 主域名 ---<br><a href="https://www.fomal.cc" title="此线路部署于Vercel" class="anno_content"><font color="#5ea6e5">fomal.cc</font></a>&nbsp;|&nbsp;<a href="https://www.fomal.cn" title="此线路部署于Vercel" class="anno_content"><font color="#5ea6e5">fomal.cn</font></a><br>--- 备用域名 ---<br><a href="https://netlify.fomal.cc" title="此线路部署于Netlify" class="anno_content"><font color="#5ea6e5">netlify.fomal.cc</font></a><br><a href="https://cloudflare.fomal.cc" title="此线路部署于Cloudflare" class="anno_content"><font color="#5ea6e5">cloudflare.fomal.cc</font></a><br>--- 网站安卓APP ---<br>🍧<a href="https://lskypro.acozycotage.net/Fomalhaut/Fomalhaut.apk" title="点这里可以下载网站的安卓APP" class="anno_content"><font color="#5ea6e5">点此下载</font></a>🍧</b></center>
@@ -750,7 +750,7 @@ busuanzi:
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
   enable: false
-  publish_date: 8/9/2022 00:00:00
+  publish_date: 19/3/2023 00:00:00
 
 # Aside widget - Newest Comments
 newest_comments:
@@ -1073,7 +1073,7 @@ wowjs:
 # envelope_comment
 # see https://akilar.top/posts/e2d3c450/
 envelope_comment:
-  enable: true #控制开关
+  enable: false #控制开关
   custom_pic:
     cover: https://tuchuang.voooe.cn/images/2023/01/02/violet.webp #信笺头部图片
     line: https://tuchuang.voooe.cn/images/2023/01/02/line.webp #信笺底部图片
